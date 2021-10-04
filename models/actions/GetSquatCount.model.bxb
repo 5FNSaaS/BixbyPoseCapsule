@@ -1,0 +1,19 @@
+action (GetSquatCount) {
+  description (스쿼트 횟수 카운트)
+  collect {
+  }
+  type(Search)
+  output (Results) {
+    throws {
+      unknown-error {
+        on-catch {
+          halt {
+            dialog {
+              template ("문제가 생겼네요. 다시 한번 말씀해주세요")
+            }
+          }
+        }
+      }
+    }
+  }
+}
