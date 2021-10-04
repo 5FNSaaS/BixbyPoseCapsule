@@ -1,0 +1,3 @@
+integer (Timer) {
+  description (등록 대기 시간)
+}

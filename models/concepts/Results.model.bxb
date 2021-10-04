@@ -1,0 +1,8 @@
+structure (Results) {
+  // 등록 할 시간이 담긴 Output Concept
+  description (__DESCRIPTION__)
+  property (result) {
+    type (Result)
+    min (Optional) max (One)
+  }
+}

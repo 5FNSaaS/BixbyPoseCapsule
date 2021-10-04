@@ -1,0 +1,15 @@
+result-view {
+  match : Results(this)
+
+  message {
+    template ("#{value(this.result)}")
+  }
+
+  render {
+
+  }
+
+  conversation-drivers {
+
+  }
+}

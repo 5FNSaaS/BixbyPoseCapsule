@@ -1,0 +1,21 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (RegistOperation) {
+      accepted-inputs (timer, name)
+      //remote-endpoint ("https://as-1e166e0f-41b2-40be-b720-2d9c6127254d.app.scf.ane2.devground.io/register") {
+      remote-endpoint ("http://team1.ssafy.dev.devground.io:1880/register"){
+      //remote-endpoint ("http://127.0.0.1:1880/register") {
+        method (GET)
+      }
+    }
+
+    action-endpoint (StartSquat) {
+      accepted-inputs ()
+      //remote-endpoint ("https://as-1e166e0f-41b2-40be-b720-2d9c6127254d.app.scf.ane2.devground.io/register") {
+      remote-endpoint ("http://team1.ssafy.dev.devground.io:1880/start"){
+      //remote-endpoint ("http://127.0.0.1:1880/register") {
+        method (GET)
+      }
+    }
+  }
+}

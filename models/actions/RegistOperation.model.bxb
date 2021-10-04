@@ -1,0 +1,27 @@
+action (RegistOperation) {
+  description (포즈 등록 액션)
+  collect {
+    input (timer) {
+      type (Timer)
+      min (Required) max (One)
+    }
+    input (name) {
+      type (Name)
+      min (Required) max (One)
+    }
+  }
+  type(Search)
+  output (Results) {
+    throws {
+      unknown-error {
+        on-catch {
+          halt {
+            dialog {
+              template ("문제가 생겼네요. 다시 한번 말씀해주세요")
+            }
+          }
+        }
+      }
+    }
+  }
+}
